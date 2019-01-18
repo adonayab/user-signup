@@ -1,0 +1,23 @@
+.error {
+  color: red;
+}
+
+h1 {
+  font-weight: bold;
+  font-family: 'Sans';
+}
+
+p {
+  font-family: 'Verdana';
+}
+
+/* body {
+  display: grid;
+  display: inline-grid;
+  grid-template-columns: 1fr [start] 1fr [end] 1fr;
+  padding: 0.5in 0;
+}
+
+body * {
+  grid-column: start/end;
+} */

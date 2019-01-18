@@ -1,31 +1,35 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Page Title</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-  <script src="main.js"></script>
-</head>
-<body>
-  <h1>Signup</h1>
+{% extends 'base.html' %}
 
-  <form action="">
-    <label for="username">
-      <p>Username: <input type="text" name="username" id="username"></p>
+{% block content%}
+
+  <h1>Signup</h1>
+  <p class="error"><strong>{{ empty_form_error }}</strong></p>
+  <form action="" method="post">
+    <label class="username" for="username">
+      <p>
+        Username: <input type="text" name="username" id="username">
+        <span class="error">{{ username_error }}</span>
+      </p>
     </label>
-    <label for="password">
-      <p>Password: <input type="password" name="password" id="password"></p>
+    <label class="password" for="password">
+      <p>
+        Password: <input type="password" name="password" id="password">
+        <span class="error">{{ password_error }}</span>
+      </p>
     </label>
-    <label for="pass_confirm">
-      <p>Confirm Password: <input type="password" name="pass_confirm" id="pass_confirm"></p>
+    <label class="password" for="pass_confirm">
+      <p>
+        Confirm Password: <input type="password" name="pass_confirm" id="pass_confirm">
+        <span class="error">{{ pass_confirm_error }}</span>
+      </p>
     </label>
-    <label for="email">
-      <p>Email: <input type="text" name="email" id="email"></p>
+    <label class="email" for="email">
+      <p>
+        Email (optional): <input type="text" name="email" id="email">
+        <span class="error">{{ email_error }}</span>
+      </p>
     </label>
     <p><input type="submit" value="Submit"></p>
   </form>
 
-</body>
-</html>
+{% endblock %}
