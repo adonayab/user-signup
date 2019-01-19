@@ -11,6 +11,12 @@ p {
   font-family: 'Verdana';
 }
 
+/* .box {
+  display: inline-block;
+  width: 750px;
+  float: right;
+} */
+
 /* body {
   display: grid;
   display: inline-grid;
