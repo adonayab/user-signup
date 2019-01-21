@@ -2,45 +2,44 @@
 
 {% block content%}
 
-<div class="container">
-  <h1>Signup</h1>
-  <p class="error"><strong>{{ empty_form_error }}</strong></p>
-  <div class="row">
-    <form action="" method="post">
-      <div class="col-lg-4 col-xs-4">
-        <label class="username" for="username">
-          <p>
-            Username: <input type="text" name="username" id="username">
-            <span class="error">{{ username_error }}</span>
-          </p>
-        </label>
-      </div>
-      <div class="col-lg-4 col-xs-4">
-      <label class="password" for="password">
-        <p>
-          Password: <input type="password" name="password" id="password">
-          <span class="error">{{ password_error }}</span>
-        </p>
-      </label>
-      </div>
-      <div class="col-lg-4 col-xs-4">
-      <label class="password" for="pass_confirm">
-        <p>
-          Confirm Password: <input type="password" name="pass_confirm" id="pass_confirm">
-          <span class="error">{{ pass_confirm_error }}</span>
-        </p>
-      </label>
-      </div>
-      <div class="col-lg-4 col-xs-4">
-      <label class="email" for="email">
-        <p>
-          Email (optional): <input type="text" name="email" id="email">
-          <span class="error">{{ email_error }}</span>
-        </p>
-      </label>
-      </div>
-      <p><input class='btn btn-success' type="submit" value="Submit"></p>
-    </form>
-  </div>
-</div>
+
+
+<h1>Signup</h1>
+<p class="error">{{ empty_form_error }}</p>
+<br>
+
+<form action="" method="post">
+  <p>
+    <label for="username">Username </label> 
+    <input type="text" name="username" id="username">
+    <span class="error">{{ username_error }}</span>    
+  </p>
+  <br>
+  <p>
+    <label for="password">Password </label>
+    <input type="password" name="password" id="password">
+    <span class="error">{{ password_error }}</span>
+    
+  </p>
+  <br>
+  <p>
+    <label for="pass_confirm">Confirm Password </label>
+    <input type="password" name="pass_confirm" id="pass_confirm">
+    <span class="error">{{ pass_confirm_error }}</span>
+    
+  </p>
+  <br>
+  <p>
+    <label for="email">Email (optional) </label>
+    <input type="text" name="email" id="email">
+    <span class="error">{{ email_error }}</span>
+    
+  </p>
+  <br>
+  <p><input class='btn' type="submit" value="Submit"></p>
+
+</form>
+
+
+
 {% endblock %}

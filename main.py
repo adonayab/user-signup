@@ -8,7 +8,7 @@ app.config['DEBUG'] = True
 @app.route('/', methods=['POST', 'GET'])
 def index():
   
-  empty_form_error = 'Please fill the required fields!'
+  empty_form_error = 'Please fill in the required fields!'
   username_error = ''
   password_error = ''
   pass_confirm_error = ''
@@ -39,7 +39,9 @@ def index():
         pass_confirm_error = "Password don't match"
         return render_template('/index.html', pass_confirm_error=pass_confirm_error)
       
-      if ('@' not in email) and ('.' not in email):
+      if email == '':
+        redirect('/welcome?username={}'.format(username))
+      elif ('@' not in email) and ('.' not in email):
         email_error = 'Invalid email address!'
         return render_template('/index.html', email_error=email_error)
     
