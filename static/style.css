@@ -1,24 +1,31 @@
 html {
-  padding: 0.5in;
-  background: url(./images/winter.jpg);
+  padding-top:  0.5in;
+  padding-left: 0.5in;
+  background: url(./images/winter_2.jpg);
   background-repeat: no-repeat;
-  background-size: 20in 14in;
+  background-size: cover;
+  background-position: center;
+  height: 100%;
   position: relative;
+}
+
+body, html {
+  height: 100%;
 }
 
 .error {
   color: red;
 }
 
-h1 {
+.h1 {
   font-weight: bold;
   font-family: 'Sans';
   font-size: 3rem;
 }
 
-p {
+.p {
   font-family: 'Verdana';
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 
 form {
@@ -38,12 +45,14 @@ input {
 }
 
 input[type=submit] {
+
+  display: table-cell;
   
-  background-color: #2e9acc;
-  border-radius: 8px;
+  background-color: #2675dbd0;
+  border-radius: 6px;
   border: none;  
-  width: 7em;
-  height: 3em;
+  width: 4.5em;
+  height: 2.2em;
   cursor: pointer;
   font-size: 1.2rem;
 }

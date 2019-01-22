@@ -40,12 +40,13 @@ def index():
         return render_template('/index.html', pass_confirm_error=pass_confirm_error)
       
       if email == '':
-        redirect('/welcome?username={}'.format(username))
+        redirect('/welcome?username={}'.format(username), code=302)
       elif ('@' not in email) and ('.' not in email):
         email_error = 'Invalid email address!'
         return render_template('/index.html', email_error=email_error)
     
     
+      # return redirect('/welcome?username={}'.format(username))
       return redirect('/welcome?username={}'.format(username))
     
       
