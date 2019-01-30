@@ -36,7 +36,7 @@ def index():
       return render_template('/index.html', username_error=username_error)
     else:
       if len(password) < 3 or len(password) > 20:
-        password_error = 'Password must be (3-20) characters'
+        password_error = 'Invalid Password'
         return render_template('/index.html', password_error=password_error)
       
       if password != pass_confirm:
